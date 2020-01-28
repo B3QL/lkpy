@@ -20,7 +20,7 @@ _AlgoKey = namedtuple('AlgoKey', ['type', 'data'])
 
 @util.last_memo(check_type='equality')
 def __load_algo(path):
-    return load(path, mmap_mode='r')
+    return load(path, mmap_mode=None)
 
 
 def _predict_user(algo, user, udf):
